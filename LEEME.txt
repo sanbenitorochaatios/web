@@ -1,0 +1,52 @@
+WEB DA COMISIÓN DE FESTAS SAN BENITO DA ROCHA · ATIOS
+==================================================
+
+INCLÚE
+- Páxina en galego coa Tasca da Rocha e a galería de 11 fotos.
+- Enderezo do furancho: Atios · A Rocha, nº 99, O Porriño.
+- Botón «Como chegar» coa localización de Google Maps facilitada pola comisión.
+- Ligazóns oficiais ao Instagram e Facebook da comisión.
+- Apartado «A nosa vida en Instagram» co widget de Revukit que nos enviaches.
+
+ABRIR A WEB
+1. Descomprime o ZIP.
+2. Abre index.html con Chrome, Firefox ou Edge.
+3. É necesaria unha conexión a Internet para ver o Instagram e cargar as fontes.
+   Se o widget non carga ao abrir o ficheiro local, publícao na web.
+
+PUBLICAR GRATIS EN GITHUB PAGES
+1. Crea un repositorio público no teu GitHub (ou usa un repositorio existente).
+2. Sobe todo o contido desta carpeta á raíz do repositorio,
+   especialmente index.html, styles.css, script.js, config.js e assets/.
+3. En Settings > Pages, escolle «Deploy from a branch» e a rama principal,
+   carpeta /(root). Garda os cambios.
+4. Espera a que GitHub publique a páxina e abre a URL de Pages que indique.
+
+INSTAGRAM
+- O código recibido xa está incorporado en index.html:
+  <div data-revukit-instagram="igw_XMOTIfEHzBT5eSQPt7cWne_3tCoojCUG"></div>
+  <script async src="https://www.revukit.com/widgets/instagram/v1/embed.js"></script>
+- A integración depende de Revukit: o número de publicacións, a frecuencia
+  de actualización e a reprodución dos Reels dependen da configuración
+  e do plan que teñas alí.
+- Se non aparece na web publicada, comproba que o widget estea activo
+  no panel de Revukit e se necesita indicar o dominio da páxina.
+- Pode non mostrarse con bloqueadores de contido ou sen JavaScript.
+- Xa non é necesario configurar a API de Meta, Cloudflare, tokens nin claves.
+
+LOCALIZACIÓN
+O botón «Como chegar · Ver en Google Maps» utiliza esta ligazón:
+https://maps.app.goo.gl/mdEH8TKD1qxGoYyn6
+
+EDITAR A INFORMACIÓN
+Abre config.js con VS Code e cambia as datas das festas,
+o nome, os datos de contacto ou os enlaces se os necesitas.
+Non necesitas instalar dependencias nin executar comandos de programación.
+
+WEB OFICIAL / PERFÍS
+Instagram: https://www.instagram.com/san_benito_da_rocha_atios/
+Facebook: https://www.facebook.com/profile.php?id=61595234168492&locale=es_ES
+
+NOTA: A conexión a Instagram realízase mediante o script de Revukit:
+non se extraen publicacións nin se afirma que xa estean cargadas sen
+que o servizo as devolva. Comproba a web publicada en liña.
