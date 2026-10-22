@@ -12,8 +12,33 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400,0,0;0,9..144,500,0,0;0,9..144,600,0,0;1,9..144,400,0,0;1,9..144,500,0,0&display=swap" rel="stylesheet" />
   <link rel="preload" href="assets/img_8034.webp" as="image" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="recordos.css" />
   <script defer src="config.js"></script>
   <script defer src="script.js"></script>
+  <script defer src="recordos-config.js"></script>
+  <script defer src="recordos.js"></script>
+  <style>
+
+/* Reel discreto, integrado co deseño orixinal */
+.reel-preview{width:100%;display:flex;align-items:stretch;min-height:142px;margin:0 0 23px;padding:0;background:#f8f5ed;border:1px solid #ddd4c5;color:#233d31;text-align:left;overflow:hidden;transition:border-color .2s,background .2s}
+.reel-preview:hover{border-color:#a9553f;background:#fffdf8}
+.reel-preview:focus-visible{outline:3px solid #a9553f;outline-offset:3px}
+.reel-preview-photo{position:relative;flex:0 0 177px;overflow:hidden;max-width:40%}
+.reel-preview-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.reel-preview-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:56px;height:56px;background:#233d31;color:#fffdf8;border:1px solid #fffdf8a6;border-radius:50%;font-size:23px;padding-left:3px}
+.reel-preview-copy{display:flex;flex-direction:column;justify-content:center;gap:7px;min-width:0;padding:23px 29px}
+.reel-preview-kicker{color:#a9553f;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.reel-preview-title{font-family:var(--display,Georgia,serif);font-size:clamp(22px,2.8vw,34px);font-weight:500;letter-spacing:-.055em;line-height:1.13}
+.reel-preview-action{font-size:12px;font-weight:700;margin-top:6px}
+.reel-dialog{width:min(470px,94vw);max-height:94vh;padding:20px;background:#f8f5ed;color:#233d31;border:1px solid #ddd4c5;box-shadow:0 25px 75px #0006}
+.reel-dialog::backdrop{background:rgba(15,31,24,.88)}
+.reel-dialog-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px}
+.reel-dialog-top strong{font-family:var(--display,Georgia,serif);font-size:22px;font-weight:500}
+.reel-dialog-close{border:1px solid #d7d0c3;background:transparent;padding:8px 11px;color:#233d31;font-size:12px}
+.reel-dialog iframe{display:block;width:100%;height:min(69vh,610px);background:#fff;border:0}
+.reel-dialog-link{display:block;text-align:center;text-decoration:underline;text-underline-offset:4px;font-size:12px;margin-top:13px}
+@media(max-width:500px){.reel-preview{min-height:117px}.reel-preview-photo{flex-basis:122px}.reel-preview-copy{padding:14px 16px;gap:5px}.reel-preview-play{width:44px;height:44px;font-size:18px}.reel-preview-title{font-size:22px}.reel-preview-action{font-size:11px}.reel-dialog{padding:13px}}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir ao contido</a>
@@ -36,6 +61,7 @@
         <a href="#la-tasca">O furancho</a>
         <a href="#novedades">Próximas festas</a>
         <a href="#galeria">Galería</a>
+        <a href="#recordos">Recordos</a>
         <a href="#instagram-actualidade">Instagram</a>
         <a class="nav-button" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
       </div>
@@ -125,6 +151,45 @@
     </section>
 
 
+
+    <!-- Espazo de recordos da veciñanza; público só despois de revisión -->
+    <section class="recordos-section section" id="recordos" aria-labelledby="recordos-title">
+      <div class="container">
+        <div class="recordos-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> A XENTE DA ROCHA</p>
+            <h2 id="recordos-title">Os vosos<br><em>recordos.</em></h2>
+          </div>
+          <p>Se tes algunha foto das festas ou queres deixar unhas palabras, este é o teu sitio. As achegas revísanse antes de publicalas.</p>
+        </div>
+        <div class="recordos-layout">
+          <div class="recordos-wall" aria-live="polite">
+            <p class="recordos-section-label">O QUE COMPARTIDES</p>
+            <div class="recordos-grid" id="recordos-grid"></div>
+            <p class="recordos-status" id="recordos-list-status">Aínda non hai recordos publicados.</p>
+          </div>
+          <div class="recordos-form-wrap">
+            <p class="recordos-section-label">COMPARTE O TEU</p>
+            <h3>Deixa aquí o teu recordo</h3>
+            <p>Podes enviar unha foto, un comentario ou as dúas cousas.</p>
+            <form id="recordos-form" enctype="multipart/form-data" novalidate>
+              <label for="recordos-nome">O teu nome <span>(opcional)</span></label>
+              <input id="recordos-nome" name="nome" type="text" autocomplete="name" maxlength="55" placeholder="Como queres aparecer" />
+              <label for="recordos-comentario">Comentario <span>(opcional se achegas foto)</span></label>
+              <textarea id="recordos-comentario" name="comentario" rows="4" maxlength="400" placeholder="Que che gustaría compartir?"></textarea>
+              <label for="recordos-foto">Fotografía <span>(JPG, PNG ou WebP · ata 5 MB)</span></label>
+              <input id="recordos-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" />
+              <p class="recordos-privacy">Envía só fotos túas ou para as que teñas permiso das persoas que aparecen. Non envíes datos privados.</p>
+              <label class="recordos-consent"><input id="recordos-consentimento" name="consentimento" type="checkbox" required /><span>Confirmo que teño permiso para compartir este contido e autorizo a súa publicación nesta web tras a revisión da comisión.</span></label>
+              <div id="recordos-turnstile"></div>
+              <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">↗</span></button>
+              <p class="recordos-feedback" id="recordos-feedback" role="status" aria-live="polite">A recepción de recordos activarase cando a comisión conecte o formulario.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Revukit: widget de Instagram da comisión, sen configuración da API de Meta. -->
     <section class="ig-section section" id="instagram-actualidade" aria-labelledby="ig-title">
       <div class="container">
@@ -138,22 +203,40 @@
             <a class="text-link text-link-line" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer">@san_benito_da_rocha_atios <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-
-        
-
-        <div style="max-width: 540px; margin: 30px auto;">
-          <blockquote
-            class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/Demh90FIR_a/"
-            data-instgrm-version="14"
-            style="width: 100%; margin: 0 auto;">
-          </blockquote>
-        </div>
-
-        <script async src="https://www.instagram.com/embed.js"></script>
-
         <div class="ig-widget-shell reveal" aria-label="Publicacións de Instagram da Comisión de Festas San Benito da Rocha Atios">
+          
+          <!-- Reel destacado: o vídeo carga só cando se abre a xanela -->
+          <button class="reel-preview" type="button" id="reel-preview" aria-haspopup="dialog" aria-controls="reel-dialog">
+            <span class="reel-preview-photo">
+              <img src="assets/img_8034-sm.webp" alt="Entrada á Tasca da Rocha" loading="lazy" />
+              <span class="reel-preview-play" aria-hidden="true">▶</span>
+            </span>
+            <span class="reel-preview-copy">
+              <span class="reel-preview-kicker">REEL DA COMISIÓN</span>
+              <span class="reel-preview-title">O noso último vídeo</span>
+              <span class="reel-preview-action">Reproducir Reel ↗</span>
+            </span>
+          </button>
+          <dialog class="reel-dialog" id="reel-dialog" aria-label="Reel da Comisión de Festas">
+            <div class="reel-dialog-top"><strong>O noso Reel</strong><button class="reel-dialog-close" type="button" id="reel-close">Pechar ✕</button></div>
+            <iframe id="reel-frame" title="Reel de Instagram da Comisión de Festas" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <a class="reel-dialog-link" href="https://www.instagram.com/reel/Demh90FIR_a/" target="_blank" rel="noopener noreferrer">Ver o vídeo directamente en Instagram ↗</a>
+          </dialog>
+          <script>
+            (() => {
+              const dialog = document.getElementById('reel-dialog');
+              const frame = document.getElementById('reel-frame');
+              const open = document.getElementById('reel-preview');
+              const close = document.getElementById('reel-close');
+              open.addEventListener('click', () => {
+                frame.src = 'https://www.instagram.com/reel/Demh90FIR_a/embed/';
+                dialog.showModal();
+              });
+              close.addEventListener('click', () => dialog.close());
+              dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+              dialog.addEventListener('close', () => frame.removeAttribute('src'));
+            })();
+          </script>
           <div data-revukit-instagram="igw_XMOTIfEHzBT5eSQPt7cWne_3tCoojCUG"></div>
           <script async src="https://www.revukit.com/widgets/instagram/v1/embed.js"></script>
           <noscript><p>Activa JavaScript para ver as publicacións aquí.</p></noscript>
