@@ -1,0 +1,41 @@
+/* Recordos: mesmo aire sobrio e tradicional ca o resto da web */
+.recordos-section{background:#f1ede4;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.recordos-heading{display:flex;align-items:end;justify-content:space-between;gap:56px;margin-bottom:54px}
+.recordos-heading h2{color:var(--forest);margin:0;line-height:1.08}
+.recordos-heading h2 em{color:var(--terra)}
+.recordos-heading>p{max-width:390px;color:var(--muted);font-size:14px;line-height:1.85;margin:0 0 4px}
+.recordos-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.9fr);gap:58px;align-items:start}
+.recordos-section-label{color:var(--terra);font-weight:700;letter-spacing:.16em;font-size:10px;margin:0 0 26px}
+.recordos-wall{min-height:350px}
+.recordos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.recordos-card{background:var(--white);border:1px solid var(--line);overflow:hidden;min-width:0}
+.recordos-card img{width:100%;height:205px;object-fit:cover;background:#ddd8ce}
+.recordos-card-body{padding:19px 21px 21px}
+.recordos-card-meta{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin-bottom:9px}
+.recordos-card-name{font-size:13px;font-weight:700;color:var(--forest);overflow-wrap:anywhere}
+.recordos-card-date{font-size:11px;color:var(--muted);white-space:nowrap}
+.recordos-card-text{font-size:13px;line-height:1.7;color:#53584f;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.recordos-status{font-size:14px;line-height:1.65;color:var(--muted);background:rgba(255,253,248,.45);padding:32px;border:1px dashed #c9c3b6;margin:0}
+.recordos-form-wrap{background:var(--cream);border:1px solid #ddd7ca;padding:34px 35px}
+.recordos-form-wrap h3{color:var(--forest);font-size:31px;letter-spacing:-.05em;line-height:1.14;margin-bottom:11px}
+.recordos-form-wrap>p:not(.recordos-section-label){color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 24px}
+#recordos-form{display:flex;flex-direction:column;gap:9px}
+#recordos-form label:not(.recordos-consent){font-size:12px;font-weight:700;color:var(--forest);margin-top:10px}
+#recordos-form label span:not(.recordos-consent span){font-size:11px;font-weight:400;color:var(--muted)}
+#recordos-form input:not([type=checkbox]),#recordos-form textarea{font-family:inherit;width:100%;background:var(--white);border:1px solid #ccc7ba;color:var(--ink);font-size:13px;border-radius:0;line-height:1.5;padding:12px 13px}
+#recordos-form textarea{resize:vertical;min-height:97px}
+#recordos-form input[type=file]{font-size:11px;padding:10px}
+#recordos-form input:focus-visible,#recordos-form textarea:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+.recordos-privacy{font-size:11px;line-height:1.65;color:var(--muted);margin:4px 0}
+.recordos-consent{display:flex;gap:10px;align-items:flex-start;color:#52584f;font-size:11px;line-height:1.65;cursor:pointer;margin:6px 0 8px}
+.recordos-consent input{flex:none;margin:3px 0 0;accent-color:var(--forest)}
+.recordos-submit{background:var(--forest);color:var(--white);border:0;padding:15px 17px;margin-top:7px;text-align:left;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:700}
+.recordos-submit:disabled{opacity:.5;cursor:not-allowed}
+.recordos-submit:not(:disabled):hover{background:var(--forest-soft)}
+.recordos-feedback{font-size:11px;color:var(--muted);line-height:1.65;margin:10px 0 0}
+.recordos-feedback[data-status=ok]{color:#225c40}
+.recordos-feedback[data-status=error]{color:#9c3c32}
+#recordos-turnstile{max-width:100%;overflow:hidden}
+@media(max-width:1000px){.recordos-layout{gap:27px;grid-template-columns:minmax(0,1fr) minmax(280px,.92fr)}.recordos-form-wrap{padding:25px}}
+@media(max-width:760px){.recordos-heading{display:block}.recordos-heading>p{margin-top:20px}.recordos-layout{grid-template-columns:1fr;gap:40px}.recordos-wall{min-height:0}.recordos-form-wrap{max-width:600px}}
+@media(max-width:500px){.recordos-grid{grid-template-columns:1fr}.recordos-heading h2{font-size:clamp(44px,11vw,60px)}.recordos-card img{height:235px}.recordos-form-wrap{padding:22px}.recordos-section-label{margin-bottom:20px}}
