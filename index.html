@@ -58,10 +58,10 @@
       </a>
       <button class="menu-toggle" type="button" aria-label="Abrir o menú" aria-expanded="false" aria-controls="main-menu"><span></span><span></span></button>
       <div class="nav-links" id="main-menu">
+        <a href="#recordos">Recordos</a>
         <a href="#la-tasca">O furancho</a>
         <a href="#novedades">Próximas festas</a>
         <a href="#galeria">Galería</a>
-        <a href="#recordos">Recordos</a>
         <a href="#instagram-actualidade">Instagram</a>
         <a class="nav-button" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
       </div>
@@ -89,6 +89,45 @@
     </section>
 
     <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>TRADICIÓN</span><i>✳</i><span>VECIÑANZA</span><i>✳</i><span>BOS MOMENTOS</span><i>✳</i><span>TRADICIÓN</span><i>✳</i><span>VECIÑANZA</span><i>✳</i><span>BOS MOMENTOS</span><i>✳</i></div></div>
+
+
+    <!-- Espazo de recordos da veciñanza; público só despois de revisión -->
+    <section class="recordos-section section" id="recordos" aria-labelledby="recordos-title">
+      <div class="container">
+        <div class="recordos-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> A XENTE DA ROCHA</p>
+            <h2 id="recordos-title">Os vosos<br><em>recordos.</em></h2>
+          </div>
+          <p>Se tes algunha foto das festas ou queres deixar unhas palabras, este é o teu sitio. As achegas revísanse antes de publicalas.</p>
+        </div>
+        <div class="recordos-layout">
+          <div class="recordos-wall" aria-live="polite">
+            <p class="recordos-section-label">O QUE COMPARTIDES</p>
+            <div class="recordos-grid" id="recordos-grid"></div>
+            <p class="recordos-status" id="recordos-list-status">Aínda non hai recordos publicados.</p>
+          </div>
+          <div class="recordos-form-wrap">
+            <p class="recordos-section-label">COMPARTE O TEU</p>
+            <h3>Deixa aquí o teu recordo</h3>
+            <p>Podes enviar unha foto, un comentario ou as dúas cousas.</p>
+            <form id="recordos-form" enctype="multipart/form-data" novalidate>
+              <label for="recordos-nome">O teu nome <span>(opcional)</span></label>
+              <input id="recordos-nome" name="nome" type="text" autocomplete="name" maxlength="55" placeholder="Como queres aparecer" />
+              <label for="recordos-comentario">Comentario <span>(opcional se achegas foto)</span></label>
+              <textarea id="recordos-comentario" name="comentario" rows="4" maxlength="400" placeholder="Que che gustaría compartir?"></textarea>
+              <label for="recordos-foto">Fotografía <span>(JPG, PNG ou WebP · ata 5 MB)</span></label>
+              <input id="recordos-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" />
+              <p class="recordos-privacy">Envía só fotos túas ou para as que teñas permiso das persoas que aparecen. Non envíes datos privados.</p>
+              <label class="recordos-consent"><input id="recordos-consentimento" name="consentimento" type="checkbox" required /><span>Confirmo que teño permiso para compartir este contido e autorizo a súa publicación nesta web tras a revisión da comisión.</span></label>
+              <div id="recordos-turnstile"></div>
+              <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">↗</span></button>
+              <p class="recordos-feedback" id="recordos-feedback" role="status" aria-live="polite">A recepción de recordos activarase cando a comisión conecte o formulario.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="story section container" id="la-tasca" aria-labelledby="story-title">
       <div class="section-heading story-heading reveal">
@@ -147,46 +186,6 @@
           <button type="button" class="gallery-photo gallery-wide reveal" data-full="assets/img_8034.webp" data-caption="Benvidos á Tasca da Rocha" aria-label="Ampliar foto: Benvidos á Tasca da Rocha"><img src="assets/img_8034-sm.webp" alt="Cartel pintado a man que dá a benvida á Tasca da Rocha" loading="lazy" /><span>Benvidos <b>↗</b></span></button>
         </div>
         <p class="gallery-hint"><span aria-hidden="true">↗</span> Preme nunha fotografía para vela en grande.</p>
-      </div>
-    </section>
-
-
-
-    <!-- Espazo de recordos da veciñanza; público só despois de revisión -->
-    <section class="recordos-section section" id="recordos" aria-labelledby="recordos-title">
-      <div class="container">
-        <div class="recordos-heading">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> A XENTE DA ROCHA</p>
-            <h2 id="recordos-title">Os vosos<br><em>recordos.</em></h2>
-          </div>
-          <p>Se tes algunha foto das festas ou queres deixar unhas palabras, este é o teu sitio. As achegas revísanse antes de publicalas.</p>
-        </div>
-        <div class="recordos-layout">
-          <div class="recordos-wall" aria-live="polite">
-            <p class="recordos-section-label">O QUE COMPARTIDES</p>
-            <div class="recordos-grid" id="recordos-grid"></div>
-            <p class="recordos-status" id="recordos-list-status">Aínda non hai recordos publicados.</p>
-          </div>
-          <div class="recordos-form-wrap">
-            <p class="recordos-section-label">COMPARTE O TEU</p>
-            <h3>Deixa aquí o teu recordo</h3>
-            <p>Podes enviar unha foto, un comentario ou as dúas cousas.</p>
-            <form id="recordos-form" enctype="multipart/form-data" novalidate>
-              <label for="recordos-nome">O teu nome <span>(opcional)</span></label>
-              <input id="recordos-nome" name="nome" type="text" autocomplete="name" maxlength="55" placeholder="Como queres aparecer" />
-              <label for="recordos-comentario">Comentario <span>(opcional se achegas foto)</span></label>
-              <textarea id="recordos-comentario" name="comentario" rows="4" maxlength="400" placeholder="Que che gustaría compartir?"></textarea>
-              <label for="recordos-foto">Fotografía <span>(JPG, PNG ou WebP · ata 5 MB)</span></label>
-              <input id="recordos-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" />
-              <p class="recordos-privacy">Envía só fotos túas ou para as que teñas permiso das persoas que aparecen. Non envíes datos privados.</p>
-              <label class="recordos-consent"><input id="recordos-consentimento" name="consentimento" type="checkbox" required /><span>Confirmo que teño permiso para compartir este contido e autorizo a súa publicación nesta web tras a revisión da comisión.</span></label>
-              <div id="recordos-turnstile"></div>
-              <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">↗</span></button>
-              <p class="recordos-feedback" id="recordos-feedback" role="status" aria-live="polite">A recepción de recordos activarase cando a comisión conecte o formulario.</p>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
 
