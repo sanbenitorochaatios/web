@@ -6,5 +6,5 @@
  */
 window.RECORDOS_CONFIG = {
   apiUrl: "https://uskcidwggwcuqglfwbqe.supabase.co/functions/v1/recordos-api",
-  turnstileSiteKey: "AQUI_TU_SITE_KEY_DE_CLOUDFLARE"
+  turnstileSiteKey: "0x4AAAAAAFgnqkaEodUAFs-e"
 };
