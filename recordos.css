@@ -39,3 +39,27 @@
 @media(max-width:1000px){.recordos-layout{gap:27px;grid-template-columns:minmax(0,1fr) minmax(280px,.92fr)}.recordos-form-wrap{padding:25px}}
 @media(max-width:760px){.recordos-heading{display:block}.recordos-heading>p{margin-top:20px}.recordos-layout{grid-template-columns:1fr;gap:40px}.recordos-wall{min-height:0}.recordos-form-wrap{max-width:600px}}
 @media(max-width:500px){.recordos-grid{grid-template-columns:1fr}.recordos-heading h2{font-size:clamp(44px,11vw,60px)}.recordos-card img{height:235px}.recordos-form-wrap{padding:22px}.recordos-section-label{margin-bottom:20px}}
+
+/* FONDO DA SECCIÓN OS VOSOS RECORDOS */
+
+#recordos {
+    background-color: #e7ebe5;
+}
+
+/* Caixa do formulario */
+#recordos .recordos-form-wrap {
+    background-color: #f8f5ef;
+    border: 1px solid #d8d4c8;
+}
+
+/* Zona onde aparecen os comentarios */
+#recordos .recordos-status {
+    background-color: #f8f5ef;
+    border: 1px dashed #c9c3b6;
+}
+
+/* Tarxetas das fotos e comentarios */
+#recordos .recordos-card {
+    background-color: #f8f5ef;
+    border: 1px solid #d8d4c8;
+}
