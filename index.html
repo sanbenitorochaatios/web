@@ -38,14 +38,26 @@
 .reel-dialog iframe{display:block;width:100%;height:min(69vh,610px);background:#fff;border:0}
 .reel-dialog-link{display:block;text-align:center;text-decoration:underline;text-underline-offset:4px;font-size:12px;margin-top:13px}
 @media(max-width:500px){.reel-preview{min-height:117px}.reel-preview-photo{flex-basis:122px}.reel-preview-copy{padding:14px 16px;gap:5px}.reel-preview-play{width:44px;height:44px;font-size:18px}.reel-preview-title{font-size:22px}.reel-preview-action{font-size:11px}.reel-dialog{padding:13px}}
+
+/* Símbolos decorativos: SVG estable en Safari/iPhone, sen emojis */
+.event-sun svg, .updates-line-art svg, .event-card-footer > span:last-child svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+.updates-line-art svg { display: block; }
+@media (max-width: 700px) {
+  .updates-line-art { display: none; }
+}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir ao contido</a>
   <div class="topline" aria-label="Mensaxe de benvida">
-    <span class="topline-spark" aria-hidden="true">✳</span>
+    <span class="topline-spark" aria-hidden="true">&#x2733;&#xFE0E;</span>
     <span>Un lugar para atoparnos. Unha festa para compartir.</span>
-    <span class="topline-right">FEITO CON CARIÑO <span aria-hidden="true">↗</span></span>
+    <span class="topline-right">FEITO CON CARIÑO <span aria-hidden="true">&#x2197;&#xFE0E;</span></span>
   </div>
 
   <header class="site-header" id="inicio">
@@ -63,7 +75,7 @@
         <a href="#novedades">Próximas festas</a>
         <a href="#galeria">Galería</a>
         <a href="#instagram-actualidade">Instagram</a>
-        <a class="nav-button" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        <a class="nav-button" href="#contacto">Contacto <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
       </div>
     </nav>
   </header>
@@ -75,20 +87,20 @@
         <h1 id="hero-title">A festa<br>comeza <em>aquí<span class="hero-dot">.</span></em></h1>
         <p class="hero-lead">Hai lugares que son moito máis ca catro paredes. Son conversas, risas, tradición e ganas de volver xuntarnos. Na Rocha, a festa facémola entre todas e todos.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#la-tasca">Coñece o noso recuncho <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#galeria">Ver as fotos <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="#la-tasca">Coñece o noso recuncho <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
+          <a class="text-link" href="#galeria">Ver as fotos <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
         </div>
-        <div class="hero-footnote"><span class="tiny-flower" aria-hidden="true">✳</span><span>San Benito da Rocha · Atios · O Porriño</span></div>
+        <div class="hero-footnote"><span class="tiny-flower" aria-hidden="true">&#x2733;&#xFE0E;</span><span>San Benito da Rocha · Atios · O Porriño</span></div>
       </div>
       <div class="hero-visual">
         <div class="hero-photo-wrap"><img class="hero-photo" src="assets/img_8034.webp" alt="Entrada á Tasca da Rocha co seu cartel pintado a man no muro de pedra" width="1680" height="1260" fetchpriority="high" /></div>
         <div class="hero-circle" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="around" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs><text><textPath href="#around">A NOSA CASA · A NOSA FESTA · </textPath></text><path d="M60 40v40M40 60h40M46 46l28 28m0-28L46 74" stroke="currentColor" stroke-width="2" /></svg></div>
         <div class="hero-caption"><span class="caption-index">01 / O NOSO RECUNCHO</span><span>Un lugar onde sentirnos na casa.</span></div>
       </div>
-      <span class="hero-edge-spark" aria-hidden="true">✳</span>
+      <span class="hero-edge-spark" aria-hidden="true">&#x2733;&#xFE0E;</span>
     </section>
 
-    <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>TRADICIÓN</span><i>✳</i><span>VECIÑANZA</span><i>✳</i><span>BOS MOMENTOS</span><i>✳</i><span>TRADICIÓN</span><i>✳</i><span>VECIÑANZA</span><i>✳</i><span>BOS MOMENTOS</span><i>✳</i></div></div>
+    <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>TRADICIÓN</span><i>&#x2733;&#xFE0E;</i><span>VECIÑANZA</span><i>&#x2733;&#xFE0E;</i><span>BOS MOMENTOS</span><i>&#x2733;&#xFE0E;</i><span>TRADICIÓN</span><i>&#x2733;&#xFE0E;</i><span>VECIÑANZA</span><i>&#x2733;&#xFE0E;</i><span>BOS MOMENTOS</span><i>&#x2733;&#xFE0E;</i></div></div>
 
 
     <!-- Espazo de recordos da veciñanza; público só despois de revisión -->
@@ -121,7 +133,7 @@
               <p class="recordos-privacy">Envía só fotos túas ou para as que teñas permiso das persoas que aparecen. Non envíes datos privados. <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Consulta a nosa política de privacidade e protección de datos.</a></p>
               <label class="recordos-consent"><input id="recordos-consentimento" name="consentimento" type="checkbox" required /><span>Confirmo que teño permiso para compartir este contido e autorizo a súa publicación nesta web tras a revisión da comisión.</span></label>
               <div id="recordos-turnstile"></div>
-              <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">↗</span></button>
+              <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">&#x2197;&#xFE0E;</span></button>
               <p class="recordos-feedback" id="recordos-feedback" role="status" aria-live="polite">A recepción de recordos activarase cando a comisión conecte o formulario.</p>
             </form>
           </div>
@@ -138,7 +150,7 @@
         <div class="story-images reveal">
           <img class="story-image-primary" src="assets/img_8018.webp" alt="Interior do furancho con paredes de pedra, mesas e manteis de cadros vermellos" width="1680" height="1260" loading="lazy" />
           <div class="story-image-secondary"><img src="assets/img_8020-sm.webp" alt="Máquina de coser antiga e louza sobre un moble rústico" width="820" height="615" loading="lazy" /></div>
-          <span class="story-picture-label">AS COUSAS DE SEMPRE <span aria-hidden="true">↗</span></span>
+          <span class="story-picture-label">AS COUSAS DE SEMPRE <span aria-hidden="true">&#x2197;&#xFE0E;</span></span>
         </div>
         <div class="story-text reveal">
           <div class="story-number">01 <span></span> O FURANCHO</div>
@@ -146,7 +158,7 @@
           <p>Muros de pedra, portas antigas, barrís de madeira e mesas preparadas para compartir. Cada detalle deste recuncho ten o encanto dos sitios que se gozan sen présa.</p>
           <p>Este espazo tamén é para iso: xuntar fotografías, contar as novidades e manter viva a ilusión polas festas de San Benito da Rocha, en Atios.</p>
           <p><strong>Horario de apertura</strong><br>Venres e sábados, a partir das 18:00 h.</p>
-          <a class="text-link text-link-line" href="#galeria">Descubre o lugar en fotos <span aria-hidden="true">↗</span></a>
+          <a class="text-link text-link-line" href="#galeria">Descubre o lugar en fotos <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
           <div class="story-tags"><span>Tradición</span><span>Veciñanza</span><span>Momentos compartidos</span></div>
         </div>
       </div>
@@ -157,35 +169,35 @@
         <div class="updates-heading reveal"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> NA NOSA AXENDA</p><h2 id="updates-title">O bo<br><em>está por chegar.</em></h2><p>Aquí contaremos todo o que imos preparando dende a Comisión de Festas San Benito da Rocha Atios.</p></div>
         <div class="updates-content reveal">
           <div class="event-card">
-            <div class="event-card-top"><span class="event-label">PRÓXIMO ACONTECEMENTO</span><span class="event-sun" aria-hidden="true">✳</span></div>
+            <div class="event-card-top"><span class="event-label">PRÓXIMO ACONTECEMENTO</span><span class="event-sun" aria-hidden="true"><svg viewBox="0 0 100 100" width="1em" height="1em" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path d="M50 8V92M8 50H92M20 20L80 80M80 20L20 80" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" /></svg></span></div>
             <span class="event-date" id="event-date">DATA POR CONFIRMAR</span>
             <h3 id="event-name">Próximas festas</h3>
             <p id="event-description">Estamos preparando as vindeiras celebracións. En canto teñamos as datas e o programa, publicarémolos aquí.</p>
-            <div class="event-card-footer"><span id="event-place">ATIOS · A ROCHA</span><span aria-hidden="true">↗</span></div>
+            <div class="event-card-footer"><span id="event-place">ATIOS · A ROCHA</span><span aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path d="M5 19L19 5M7 5H19V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span></div>
           </div>
-          <div class="updates-note"><span class="updates-note-icon" aria-hidden="true">✻</span><div><strong>Queres estar ao día?</strong><p>Iremos engadindo aquí as datas, as novidades e todos os detalles de cada celebración.</p></div></div>
+          <div class="updates-note"><span class="updates-note-icon" aria-hidden="true">&#x273B;&#xFE0E;</span><div><strong>Queres estar ao día?</strong><p>Iremos engadindo aquí as datas, as novidades e todos os detalles de cada celebración.</p></div></div>
         </div>
       </div>
-      <div class="updates-line-art" aria-hidden="true">✳</div>
+      <div class="updates-line-art" aria-hidden="true"><svg viewBox="0 0 100 100" width="1em" height="1em" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path d="M50 8V92M8 50H92M20 20L80 80M80 20L20 80" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" /></svg></div>
     </section>
 
     <section class="gallery-section section" id="galeria" aria-labelledby="gallery-title">
       <div class="container">
         <div class="gallery-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> OS NOSOS RECORDOS</p><h2 id="gallery-title">Un paseo pola<br><em>Rocha.</em></h2></div><p>Ás veces as fotos contan máis ca mil palabras. Así é o noso recuncho por dentro e por fóra.</p></div>
         <div class="gallery-grid" id="gallery-grid">
-          <button type="button" class="gallery-photo gallery-big reveal" data-full="assets/img_8024.webp" data-caption="O patio da tasca" aria-label="Ampliar foto: O patio da tasca"><img src="assets/img_8024-sm.webp" alt="Patio exterior de pedra, barrís e árbores baixo un ceo azul" loading="lazy" /><span>O patio <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8016.webp" data-caption="A casiña de Ton" aria-label="Ampliar foto: A casiña de Ton"><img src="assets/img_8016-sm.webp" alt="Portiña de madeira cun cartel que di La Casita de Ton" loading="lazy" /><span>Pequenos detalles <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8022.webp" data-caption="Detalles do interior" aria-label="Ampliar foto: Detalles do interior"><img src="assets/img_8022-sm.webp" alt="Ventá verde, xerras colgadas e encerado das tapas" loading="lazy" /><span>Por dentro <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8014.webp" data-caption="Recunchos para xuntarse" aria-label="Ampliar foto: Recunchos para xuntarse"><img src="assets/img_8014-sm.webp" alt="Alpendre de pedra con mesas e cadeiras brancas" loading="lazy" /><span>Recunchos <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8020.webp" data-caption="Obxectos con historia" aria-label="Ampliar foto: Obxectos con historia"><img src="assets/img_8020-sm.webp" alt="Moble de madeira e ferro con pratos e unha antiga máquina de coser" loading="lazy" /><span>Obxectos con historia <b>↗</b></span></button>
-          <button type="button" class="gallery-photo gallery-wide reveal" data-full="assets/img_8018.webp" data-caption="O corazón da tasca" aria-label="Ampliar foto: O corazón da tasca"><img src="assets/img_8018-sm.webp" alt="Mesas con manteis de cadros nunha sala de pedra" loading="lazy" /><span>O corazón da tasca <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8027.webp" data-caption="Un espazo para conversar" aria-label="Ampliar foto: Un espazo para conversar"><img src="assets/img_8027-sm.webp" alt="Mesas e cadeiras brancas baixo un alpendre de pedra" loading="lazy" /><span>Para conversar <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8010.webp" data-caption="A fachada" aria-label="Ampliar foto: A fachada"><img src="assets/img_8010-sm.webp" alt="Parede de pedra con portas claras, cadeiras e un barril" loading="lazy" /><span>A fachada <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8011.webp" data-caption="Unha porta aberta" aria-label="Ampliar foto: Unha porta aberta"><img src="assets/img_8011-sm.webp" alt="Entrada aberta nunha fachada de pedra con chanzos" loading="lazy" /><span>Unha porta aberta <b>↗</b></span></button>
-          <button type="button" class="gallery-photo reveal" data-full="assets/img_8026.webp" data-caption="Os espazos da tasca" aria-label="Ampliar foto: Os espazos da tasca"><img src="assets/img_8026-sm.webp" alt="Construción tradicional de pedra con varias entradas" loading="lazy" /><span>A contorna <b>↗</b></span></button>
-          <button type="button" class="gallery-photo gallery-wide reveal" data-full="assets/img_8034.webp" data-caption="Benvidos á Tasca da Rocha" aria-label="Ampliar foto: Benvidos á Tasca da Rocha"><img src="assets/img_8034-sm.webp" alt="Cartel pintado a man que dá a benvida á Tasca da Rocha" loading="lazy" /><span>Benvidos <b>↗</b></span></button>
+          <button type="button" class="gallery-photo gallery-big reveal" data-full="assets/img_8024.webp" data-caption="O patio da tasca" aria-label="Ampliar foto: O patio da tasca"><img src="assets/img_8024-sm.webp" alt="Patio exterior de pedra, barrís e árbores baixo un ceo azul" loading="lazy" /><span>O patio <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8016.webp" data-caption="A casiña de Ton" aria-label="Ampliar foto: A casiña de Ton"><img src="assets/img_8016-sm.webp" alt="Portiña de madeira cun cartel que di La Casita de Ton" loading="lazy" /><span>Pequenos detalles <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8022.webp" data-caption="Detalles do interior" aria-label="Ampliar foto: Detalles do interior"><img src="assets/img_8022-sm.webp" alt="Ventá verde, xerras colgadas e encerado das tapas" loading="lazy" /><span>Por dentro <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8014.webp" data-caption="Recunchos para xuntarse" aria-label="Ampliar foto: Recunchos para xuntarse"><img src="assets/img_8014-sm.webp" alt="Alpendre de pedra con mesas e cadeiras brancas" loading="lazy" /><span>Recunchos <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8020.webp" data-caption="Obxectos con historia" aria-label="Ampliar foto: Obxectos con historia"><img src="assets/img_8020-sm.webp" alt="Moble de madeira e ferro con pratos e unha antiga máquina de coser" loading="lazy" /><span>Obxectos con historia <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo gallery-wide reveal" data-full="assets/img_8018.webp" data-caption="O corazón da tasca" aria-label="Ampliar foto: O corazón da tasca"><img src="assets/img_8018-sm.webp" alt="Mesas con manteis de cadros nunha sala de pedra" loading="lazy" /><span>O corazón da tasca <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8027.webp" data-caption="Un espazo para conversar" aria-label="Ampliar foto: Un espazo para conversar"><img src="assets/img_8027-sm.webp" alt="Mesas e cadeiras brancas baixo un alpendre de pedra" loading="lazy" /><span>Para conversar <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8010.webp" data-caption="A fachada" aria-label="Ampliar foto: A fachada"><img src="assets/img_8010-sm.webp" alt="Parede de pedra con portas claras, cadeiras e un barril" loading="lazy" /><span>A fachada <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8011.webp" data-caption="Unha porta aberta" aria-label="Ampliar foto: Unha porta aberta"><img src="assets/img_8011-sm.webp" alt="Entrada aberta nunha fachada de pedra con chanzos" loading="lazy" /><span>Unha porta aberta <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo reveal" data-full="assets/img_8026.webp" data-caption="Os espazos da tasca" aria-label="Ampliar foto: Os espazos da tasca"><img src="assets/img_8026-sm.webp" alt="Construción tradicional de pedra con varias entradas" loading="lazy" /><span>A contorna <b>&#x2197;&#xFE0E;</b></span></button>
+          <button type="button" class="gallery-photo gallery-wide reveal" data-full="assets/img_8034.webp" data-caption="Benvidos á Tasca da Rocha" aria-label="Ampliar foto: Benvidos á Tasca da Rocha"><img src="assets/img_8034-sm.webp" alt="Cartel pintado a man que dá a benvida á Tasca da Rocha" loading="lazy" /><span>Benvidos <b>&#x2197;&#xFE0E;</b></span></button>
         </div>
-        <p class="gallery-hint"><span aria-hidden="true">↗</span> Preme nunha fotografía para vela en grande.</p>
+        <p class="gallery-hint"><span aria-hidden="true">&#x2197;&#xFE0E;</span> Preme nunha fotografía para vela en grande.</p>
       </div>
     </section>
 
@@ -199,7 +211,7 @@
           </div>
           <div class="ig-intro">
             <p>Un anaquiño das nosas festas, os preparativos e os momentos que compartimos. Descubre as fotos e os Reels da comisión.</p>
-            <a class="text-link text-link-line" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer">@san_benito_da_rocha_atios <span aria-hidden="true">↗</span></a>
+            <a class="text-link text-link-line" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer">@san_benito_da_rocha_atios <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
           </div>
         </div>
         <div class="ig-widget-shell reveal" aria-label="Publicacións de Instagram da Comisión de Festas San Benito da Rocha Atios">
@@ -208,18 +220,18 @@
           <button class="reel-preview" type="button" id="reel-preview" aria-haspopup="dialog" aria-controls="reel-dialog">
             <span class="reel-preview-photo">
               <img src="assets/img_8034-sm.webp" alt="Entrada á Tasca da Rocha" loading="lazy" />
-              <span class="reel-preview-play" aria-hidden="true">▶</span>
+              <span class="reel-preview-play" aria-hidden="true">&#x25B6;&#xFE0E;</span>
             </span>
             <span class="reel-preview-copy">
               <span class="reel-preview-kicker">REEL DA COMISIÓN</span>
               <span class="reel-preview-title">O noso último vídeo</span>
-              <span class="reel-preview-action">Reproducir Reel ↗</span>
+              <span class="reel-preview-action">Reproducir Reel &#x2197;&#xFE0E;</span>
             </span>
           </button>
           <dialog class="reel-dialog" id="reel-dialog" aria-label="Reel da Comisión de Festas">
             <div class="reel-dialog-top"><strong>O noso Reel</strong><button class="reel-dialog-close" type="button" id="reel-close">Pechar ✕</button></div>
             <iframe id="reel-frame" title="Reel de Instagram da Comisión de Festas" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            <a class="reel-dialog-link" href="https://www.instagram.com/reel/Dey1Gb-I_So/" target="_blank" rel="noopener noreferrer">Ver o vídeo directamente en Instagram ↗</a>
+            <a class="reel-dialog-link" href="https://www.instagram.com/reel/Dey1Gb-I_So/" target="_blank" rel="noopener noreferrer">Ver o vídeo directamente en Instagram &#x2197;&#xFE0E;</a>
           </dialog>
           <script>
             (() => {
@@ -242,12 +254,12 @@
         </div>
         <div class="ig-follow">
           <p>Se as publicacións non aparecen, podes velas directamente no noso perfil de Instagram.</p>
-          <a class="button button-dark" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer">Ver máis en Instagram <span aria-hidden="true">↗</span></a>
+          <a class="button button-dark" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer">Ver máis en Instagram <span aria-hidden="true">&#x2197;&#xFE0E;</span></a>
         </div>
       </div>
     </section>
 
-    <section class="community" aria-labelledby="community-title"><div class="container community-inner"><div class="community-copy reveal"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> O MÁIS IMPORTANTE</p><h2 id="community-title">A festa<br>facémola <em>entre todos.</em></h2><p>As mellores festas fanse con persoas que achegan ideas, tempo, ganas e moita ilusión. O que fai especial a Rocha é a súa xente e as ganas de celebrar xuntos.</p><a class="button button-cream" href="#contacto">Colabora connosco <span aria-hidden="true">↗</span></a></div><div class="community-art reveal"><div class="community-picture"><img src="assets/img_8014.webp" alt="Zona de encontro ao aire libre con cadeiras brancas" loading="lazy" /></div><div class="community-sticker"><span>FEITO CON</span><strong>♥</strong><span>CARIÑO</span></div></div></div></section>
+    <section class="community" aria-labelledby="community-title"><div class="container community-inner"><div class="community-copy reveal"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> O MÁIS IMPORTANTE</p><h2 id="community-title">A festa<br>facémola <em>entre todos.</em></h2><p>As mellores festas fanse con persoas que achegan ideas, tempo, ganas e moita ilusión. O que fai especial a Rocha é a súa xente e as ganas de celebrar xuntos.</p><a class="button button-cream" href="#contacto">Colabora connosco <span aria-hidden="true">&#x2197;&#xFE0E;</span></a></div><div class="community-art reveal"><div class="community-picture"><img src="assets/img_8014.webp" alt="Zona de encontro ao aire libre con cadeiras brancas" loading="lazy" /></div><div class="community-sticker"><span>FEITO CON</span><strong>&#x2665;&#xFE0E;</strong><span>CARIÑO</span></div></div></div></section>
 
 
     <section class="social-section section" id="redes" aria-labelledby="social-title">
@@ -258,24 +270,24 @@
         </div>
         <div class="social-grid reveal">
           <a id="instagram-link" class="social-card" href="https://www.instagram.com/san_benito_da_rocha_atios/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o Instagram da Comisión de Festas San Benito da Rocha Atios">
-            <span class="social-card-top"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-arrow" aria-hidden="true">↗</span></span>
+            <span class="social-card-top"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg></span><span class="social-arrow" aria-hidden="true">&#x2197;&#xFE0E;</span></span>
             <strong>Instagram</strong><span id="instagram-description">@san_benito_da_rocha_atios</span>
-            <small id="instagram-cta">Visitar o perfil ↗</small>
+            <small id="instagram-cta">Visitar o perfil &#x2197;&#xFE0E;</small>
           </a>
           <a id="facebook-link" class="social-card" href="https://www.facebook.com/profile.php?id=61595234168492&amp;locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Visitar o Facebook da Comisión de Festas San Benito da Rocha Atios">
-            <span class="social-card-top"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.87v-7H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.77-3.88 1.1 0 2.26.2 2.26.2v2.47H15.2c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.87h-2.35v7A10 10 0 0 0 22 12Z"/></svg></span><span class="social-arrow" aria-hidden="true">↗</span></span>
+            <span class="social-card-top"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.87v-7H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.77-3.88 1.1 0 2.26.2 2.26.2v2.47H15.2c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.87h-2.35v7A10 10 0 0 0 22 12Z"/></svg></span><span class="social-arrow" aria-hidden="true">&#x2197;&#xFE0E;</span></span>
             <strong>Facebook</strong><span id="facebook-description">Comisión de Festas San Benito da Rocha Atios</span>
-            <small id="facebook-cta">Visitar o perfil ↗</small>
+            <small id="facebook-cta">Visitar o perfil &#x2197;&#xFE0E;</small>
           </a>
         </div>
         <p class="social-disclaimer" id="social-disclaimer">Síguenos nas nosas redes sociais para coñecer as novidades da comisión e das festas.</p>
       </div>
     </section>
 
-    <section class="contact section container" id="contacto" aria-labelledby="contact-title"><div class="contact-heading reveal"><p class="eyebrow"><span class="eyebrow-line"></span> ONDE NOS ATOPAS</p><h2 id="contact-title">Falamos?</h2><p>Tes algunha idea, queres botar unha man ou saber o que estamos preparando? Encantaríanos contar contigo.</p></div><div class="contact-panel reveal"><div class="contact-panel-icon" aria-hidden="true">✳</div><div class="contact-panel-main"><p class="contact-panel-kicker">COMISIÓN DE FESTAS SAN BENITO DA ROCHA ATIOS</p><h3>Sempre hai sitio para alguén máis.</h3><p id="contact-info">Podes atoparnos nas nosas redes sociais. Para visitar o furancho, consulta a localización.</p><div class="contact-links" id="contact-links" aria-label="Vías de contacto"></div><div class="location-block"><span class="location-kicker">O NOSO FURANCHO</span><address id="place-address">Tasca da Rocha · Atios, Rocha, nº 99<br>O Porriño (Pontevedra)</address><a id="maps-link" href="https://maps.app.goo.gl/mdEH8TKD1qxGoYyn6" target="_blank" rel="noopener noreferrer">Como chegar · Ver en Google Maps <span aria-hidden="true">↗</span></a></div></div></div></section>
+    <section class="contact section container" id="contacto" aria-labelledby="contact-title"><div class="contact-heading reveal"><p class="eyebrow"><span class="eyebrow-line"></span> ONDE NOS ATOPAS</p><h2 id="contact-title">Falamos?</h2><p>Tes algunha idea, queres botar unha man ou saber o que estamos preparando? Encantaríanos contar contigo.</p></div><div class="contact-panel reveal"><div class="contact-panel-icon" aria-hidden="true">&#x2733;&#xFE0E;</div><div class="contact-panel-main"><p class="contact-panel-kicker">COMISIÓN DE FESTAS SAN BENITO DA ROCHA ATIOS</p><h3>Sempre hai sitio para alguén máis.</h3><p id="contact-info">Podes atoparnos nas nosas redes sociais. Para visitar o furancho, consulta a localización.</p><div class="contact-links" id="contact-links" aria-label="Vías de contacto"></div><div class="location-block"><span class="location-kicker">O NOSO FURANCHO</span><address id="place-address">Tasca da Rocha · Atios, Rocha, nº 99<br>O Porriño (Pontevedra)</address><a id="maps-link" href="https://maps.app.goo.gl/mdEH8TKD1qxGoYyn6" target="_blank" rel="noopener noreferrer">Como chegar · Ver en Google Maps <span aria-hidden="true">&#x2197;&#xFE0E;</span></a></div></div></div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-main"><div><a class="footer-brand" href="#inicio">Comisión de Festas<span aria-hidden="true">✳</span></a><p>San Benito da Rocha · Atios. Un recuncho para compartir e celebrar.</p></div><div class="footer-side"><p>FEITO CON GANAS E MOITO CARIÑO</p><a href="#inicio">Volver ao inicio ↑</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Comisión de Festas San Benito da Rocha Atios</span><span><a href="privacidade.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacidade e protección de datos</a></span></div></footer>
+  <footer class="footer"><div class="container footer-main"><div><a class="footer-brand" href="#inicio">Comisión de Festas<span aria-hidden="true">&#x2733;&#xFE0E;</span></a><p>San Benito da Rocha · Atios. Un recuncho para compartir e celebrar.</p></div><div class="footer-side"><p>FEITO CON GANAS E MOITO CARIÑO</p><a href="#inicio">Volver ao inicio &#x2191;&#xFE0E;</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Comisión de Festas San Benito da Rocha Atios</span><span><a href="privacidade.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacidade e protección de datos</a></span></div></footer>
 
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografías" aria-hidden="true">
     <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Pechar a fotografía">✕</button>
