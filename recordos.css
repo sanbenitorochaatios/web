@@ -40,26 +40,39 @@
 @media(max-width:760px){.recordos-heading{display:block}.recordos-heading>p{margin-top:20px}.recordos-layout{grid-template-columns:1fr;gap:40px}.recordos-wall{min-height:0}.recordos-form-wrap{max-width:600px}}
 @media(max-width:500px){.recordos-grid{grid-template-columns:1fr}.recordos-heading h2{font-size:clamp(44px,11vw,60px)}.recordos-card img{height:235px}.recordos-form-wrap{padding:22px}.recordos-section-label{margin-bottom:20px}}
 
-/* FONDO DA SECCIÓN OS VOSOS RECORDOS */
 
-#recordos {
-    background-color: #e7ebe5;
-}
+/* Cor anterior escollida pola comisión */
+#recordos { background-color: #e7ebe5; }
+#recordos .recordos-form-wrap { background-color: #f8f5ef; border: 1px solid #d8d4c8; }
+#recordos .recordos-status { background-color: #f8f5ef; border: 1px dashed #c9c3b6; }
+#recordos .recordos-card { background-color: #f8f5ef; border: 1px solid #d8d4c8; }
 
-/* Caixa do formulario */
-#recordos .recordos-form-wrap {
-    background-color: #f8f5ef;
-    border: 1px solid #d8d4c8;
-}
+/* Lectura do aviso de privacidade: estilos sobrios e adaptables a móbil */
+.recordos-privacy-info{padding:15px 16px;background:#eee9df;border-left:2px solid var(--terra);font-size:12px;line-height:1.7;color:var(--forest)}
+.recordos-privacy-info>strong{font-size:12px}
+.recordos-privacy-info p{font-size:12px;line-height:1.7;margin:7px 0 0;color:#4e5d50}
+.recordos-privacy-info a,.recordos-privacy-open{color:var(--forest);text-underline-offset:3px}
+.recordos-privacy-open{display:inline-flex;align-items:center;gap:8px;background:none;padding:7px 0;margin-top:8px;border:0;border-bottom:1px solid var(--terra);font-family:inherit;font-size:12px;line-height:1.5;cursor:pointer;text-align:left;font-weight:700}
+.recordos-privacy-open:hover{color:var(--terra)}
+.recordos-privacy-hint{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.recordos-consent-privacy input:disabled{opacity:.5;cursor:not-allowed}
+.recordos-consent-privacy:has(input:disabled){cursor:default}
+.recordos-privacy-dialog{width:min(720px,calc(100% - 28px));height:min(86dvh,760px);max-height:86dvh;max-width:none;padding:0;overflow:hidden;border:1px solid #dbd4c6;background:#f8f5ef;color:var(--forest);box-shadow:0 24px 90px rgba(18,32,23,.35);flex-direction:column}
+.recordos-privacy-dialog[open]{display:flex}
+.recordos-privacy-dialog::backdrop{background:rgba(14,28,20,.73)}
+.recordos-privacy-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:21px 25px 17px;border-bottom:1px solid #ded8cb}
+.recordos-dialog-eyebrow{font-size:10px;letter-spacing:.16em;color:var(--terra);font-weight:700;margin:0 0 7px}
+.recordos-privacy-dialog h2{font-family:var(--display,Georgia,serif);font-size:clamp(22px,4vw,32px);line-height:1.2;margin:0;letter-spacing:-.04em;color:var(--forest)}
+.recordos-privacy-close{border:0;background:transparent;cursor:pointer;font-size:28px;line-height:1;color:var(--forest);padding:2px 5px}
+.recordos-privacy-scroll{padding:24px 28px;overflow-y:auto;flex:1 1 auto;min-height:0;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;font-size:14px;line-height:1.75;color:#424f44}
+.recordos-privacy-scroll h1{font:500 30px/1.17 var(--display,Georgia,serif);color:var(--forest);margin:0 0 16px}
+.recordos-privacy-scroll h2{font-size:21px;line-height:1.3;margin:25px 0 10px;letter-spacing:-.02em}
+.recordos-privacy-scroll p{margin:0 0 13px;line-height:1.75}
+.recordos-privacy-scroll a{color:var(--terra);text-underline-offset:3px;overflow-wrap:anywhere}
+.recordos-privacy-scroll .eyebrow{font-size:10px;letter-spacing:.15em;color:var(--terra);font-weight:700}
+.recordos-privacy-dialog-foot{flex:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 25px;border-top:1px solid #ded8cb;background:#f8f5ef}
+.recordos-privacy-dialog-foot p{font-size:12px;line-height:1.45;color:#646d64;margin:0}
+.recordos-privacy-done{background:var(--forest);color:white;padding:12px 16px;border:0;font-weight:700;font-size:12px;cursor:pointer;flex:none}
+.recordos-privacy-done:disabled{opacity:.38;cursor:not-allowed}
+@media(max-width:600px){.recordos-privacy-dialog{height:min(91dvh,840px);max-height:91dvh}.recordos-privacy-dialog-head,.recordos-privacy-dialog-foot{padding:15px 16px}.recordos-privacy-scroll{padding:18px 17px}.recordos-privacy-dialog-foot{flex-direction:column;align-items:stretch}.recordos-privacy-done{width:100%}}
 
-/* Zona onde aparecen os comentarios */
-#recordos .recordos-status {
-    background-color: #f8f5ef;
-    border: 1px dashed #c9c3b6;
-}
-
-/* Tarxetas das fotos e comentarios */
-#recordos .recordos-card {
-    background-color: #f8f5ef;
-    border: 1px solid #d8d4c8;
-}
