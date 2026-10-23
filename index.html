@@ -130,7 +130,17 @@
               <textarea id="recordos-comentario" name="comentario" rows="4" maxlength="400" placeholder="Que che gustaría compartir?"></textarea>
               <label for="recordos-foto">Fotografía <span>(JPG, PNG ou WebP · ata 5 MB)</span></label>
               <input id="recordos-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" />
-              <p class="recordos-privacy">Envía só fotos túas ou para as que teñas permiso das persoas que aparecen. Non envíes datos privados. <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Consulta a nosa política de privacidade e protección de datos.</a></p>
+              <p class="recordos-privacy">Envía só fotografías que teñas dereito a compartir, cos permisos necesarios das persoas que aparecen. Non envíes datos privados.</p>
+              <div class="recordos-privacy-info" aria-label="Información básica de privacidade">
+                <strong>Información básica de privacidade</strong>
+                <p><strong>Responsable:</strong> Asociación San Benito da Rocha. <strong>Finalidade:</strong> recibir, revisar e, se procede, publicar as fotos e comentarios que envíes. <strong>Dereitos:</strong> podes solicitar a retirada ou exercer os teus dereitos escribindo a <a href="mailto:sanbenitorochaatios@gmail.com">sanbenitorochaatios@gmail.com</a>.</p>
+                <button type="button" class="recordos-privacy-open" id="recordos-privacy-open">Ler a información de privacidade <span aria-hidden="true">↗︎</span></button>
+                <p>O texto completo tamén está dispoñible en <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Privacidade e protección de datos</a>.</p>
+              </div>
+              <label class="recordos-consent recordos-consent-privacy">
+                <input id="recordos-privacidade-confirm" name="privacidade_confirmada" type="checkbox" required disabled />
+                <span>Confirmo que consultei a información de privacidade e protección de datos <span class="recordos-privacy-hint">(abre o aviso e chega ata o final para activar esta caixa)</span>.</span>
+              </label>
               <label class="recordos-consent"><input id="recordos-consentimento" name="consentimento" type="checkbox" required /><span>Confirmo que teño permiso para compartir este contido e autorizo a súa publicación nesta web tras a revisión da comisión.</span></label>
               <div id="recordos-turnstile"></div>
               <button type="submit" class="recordos-submit" id="recordos-enviar" disabled>Enviar para revisión <span aria-hidden="true">&#x2197;&#xFE0E;</span></button>
@@ -289,6 +299,25 @@
 
   <footer class="footer"><div class="container footer-main"><div><a class="footer-brand" href="#inicio">Comisión de Festas<span aria-hidden="true">&#x2733;&#xFE0E;</span></a><p>San Benito da Rocha · Atios. Un recuncho para compartir e celebrar.</p></div><div class="footer-side"><p>FEITO CON GANAS E MOITO CARIÑO</p><a href="#inicio">Volver ao inicio &#x2191;&#xFE0E;</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Comisión de Festas San Benito da Rocha Atios</span><span><a href="privacidade.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Privacidade e protección de datos</a></span></div></footer>
 
+
+  <!-- Aviso completo de privacidade: cárgase dende privacidade.html, sen duplicar textos -->
+  <dialog class="recordos-privacy-dialog" id="recordos-privacy-dialog" aria-labelledby="recordos-privacy-title">
+    <div class="recordos-privacy-dialog-head">
+      <div>
+        <p class="recordos-dialog-eyebrow">INFORMACIÓN IMPORTANTE</p>
+        <h2 id="recordos-privacy-title">Privacidade e protección de datos</h2>
+      </div>
+      <button type="button" class="recordos-privacy-close" id="recordos-privacy-close" aria-label="Pechar información de privacidade">×</button>
+    </div>
+    <div class="recordos-privacy-scroll" id="recordos-privacy-scroll" tabindex="0" role="region" aria-label="Texto completo de privacidade">
+      <p>Cargando a información de privacidade…</p>
+    </div>
+    <div class="recordos-privacy-dialog-foot">
+      <p id="recordos-privacy-progress" role="status" aria-live="polite">Le o aviso e desprázate ata o final.</p>
+      <button type="button" class="recordos-privacy-done" id="recordos-privacy-done" disabled>Xa consultei a información</button>
+    </div>
+  </dialog>
+
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografías" aria-hidden="true">
     <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Pechar a fotografía">✕</button>
     <button type="button" class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Foto anterior">←</button>
@@ -298,3 +327,4 @@
   </div>
 </body>
 </html>
+
